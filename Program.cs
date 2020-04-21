@@ -3,15 +3,17 @@
 namespace guessing_game {
     class Program {
         static void Main (string[] args) {
-            int secret_number_easy = 9;
-            int secret_number_medium = 19;
-            int secret_number_hard = 43;
+            Random rnd = new Random ();
+            int secret_number_easy = rnd.Next (1, 11);
+            int secret_number_medium = rnd.Next (1, 21);
+            int secret_number_hard = rnd.Next (1, 51);
 
             int guess_limit_easy = 6;
             int guess_limit_medium = 4;
             int guess_limit_hard = 3;
 
             Console.WriteLine ("WELCOME TO THE GUESSING GAME !!!");
+            Console.WriteLine ("THERE ARE 3 LEVELS IN THIS GAME!!!");
             Console.WriteLine ("What level do you wanna play?");
             Console.Write ("Enter level [ easy or medium or hard ]: ");
             string level = Console.ReadLine ();
